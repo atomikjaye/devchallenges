@@ -1,37 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 html,body {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  box-sizing: border-box;
+  color: #333;
 }
 
 body {
-    font-family: 'Space Mono', monospace;
-    display:flex;
-    flex-direction: column;
-    /* justify-content:right; */
-    align-items: center;
-    background-color:black;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-    background-color: white;
-    align-self:stretch;
-    font-weight: 700;
-    font-size: 1.2rem;
-
+  align-self:stretch;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 30px 30px 30px 50px;
+  text-transform: uppercase;
 }
 
+article {
+  display: flex;  
+  flex: 1 0 auto;
+  }
+  
 main {
-    display: flex;  
-    width: 80%;
-    background-color: white;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+  
+section {
+  width: 40%;
+}
+
+footer {
+  text-align: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 20px;
+  width: 100%
 }
 
 .sideimg {
-    width: 540px;
+  width: 100%;
+  max-width: 540px;
 }
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
+}
+
+.desc {
+  max-width: 360px;
+  font-size: 1.4rem;
+}
+
+.button:link, .button:visited, .button:active{
+  display: inline-block;
+  margin-top: 40px;
+  background-color: #333;
+  color: white;
+  font-family: inherit;
+  padding: 15px 30px 15px 30px;
+  border: 0px;
+  text-decoration:none;
+  transition: background-color ease-in .2s;
+}
+
+.button:hover {
+  background-color: #60588E;
+}
+
+a.credit:link {
+  color: #60588E;
+  transition: color ease-in 200ms;
+  text-decoration: none;
+}
+
+a.credit:visited {
+  color: #7b72af;
+}
+
+a.credit:hover {
+  color: #6e6e6e;
+}
+a.credit:active{
+  color: #3f3f3f;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+  
+  section {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .image {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .text {
+    padding: 10px;
+  }
+
+  p{
+    margin-left: 10px;
+  }
 }
